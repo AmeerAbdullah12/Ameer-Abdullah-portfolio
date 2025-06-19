@@ -17,7 +17,7 @@ const Projects = () => {
       image: '/water.jpg',
       tech: ['React', 'TypeScript', 'Socket.io', 'MongoDB', 'Express'],
       github: 'https://github.com/ameerabdullah/task-manager',
-      live: 'https://taskmanager-demo.com',
+      live: 'https://rehydr8.vercel.app',
     },
     {
       title: 'Gaming Portal Dashboard',
@@ -25,7 +25,7 @@ const Projects = () => {
       image: '/gaming-portal.png',
       tech: ['React', 'Chart.js', 'OpenWeather API', 'Tailwind CSS'],
       github: 'https://github.com/ameerabdullah/weather-dashboard',
-      live: 'https://weather-dashboard-demo.com',
+      live: 'https://casinomonsters.vip/login',
     },
     {
       title: 'Payment Portal for Gaming Portal',
@@ -33,7 +33,7 @@ const Projects = () => {
       image: 'https://images.unsplash.com/photo-1521791136060-8f1b2c3d4e5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Stripe'],
       github: 'https://github.com/ameerabdullah/social-analytics',
-      live: 'https://analytics-demo.com',
+      live: 'https://main.dla4cz2vcdwio.amplifyapp.com',
     },
     {
       title : "Internship Management System",
