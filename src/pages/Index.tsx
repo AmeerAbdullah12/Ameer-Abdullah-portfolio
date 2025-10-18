@@ -12,7 +12,7 @@ const Index = () => {
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
-    const isDark = savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    const isDark = savedTheme ? savedTheme === 'dark' : true || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches);
     setDarkMode(isDark);
     document.documentElement.classList.toggle('dark', isDark);
   }, []);
