@@ -1,21 +1,20 @@
-
-import React from 'react';
+import React from "react";
 
 const About = () => {
   const skills = [
-    { name: 'React / Next.js', level: 90 },
-    { name: 'TypeScript', level: 80 },
-    { name: 'Node.js', level: 90 },
-    { name: 'PostgreSQL', level: 90 },
-    { name: 'Docker', level: 65 },
-    { name: 'AWS', level: 70 },
+    { name: "React / Next.js", level: 90 },
+    { name: "TypeScript", level: 80 },
+    { name: "Node.js", level: 90 },
+    { name: "PostgreSQL", level: 90 },
+    { name: "Docker", level: 65 },
+    { name: "AWS", level: 70 },
   ];
 
   const stats = [
-    { number: '1.5+', label: 'Years Experience' },
-    { number: '10+', label: 'Projects Completed' },
-    { number: '5+', label: 'Technologies' },
-    { number: '100%', label: 'Client Satisfaction' },
+    { number: "1.5+", label: "Years Experience" },
+    { number: "10+", label: "Projects Completed" },
+    { number: "5+", label: "Technologies" },
+    { number: "100%", label: "Client Satisfaction" },
   ];
 
   return (
@@ -23,31 +22,42 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            About <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Me</span>
+            About{" "}
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Me
+            </span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            Passionate about creating innovative solutions that bridge the gap between design and functionality
+            Passionate about creating innovative solutions that bridge the gap
+            between design and functionality
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12">
           {/* About Content */}
-          <div className="space-y-6">
+          <div className="">
             <div className="prose prose-lg dark:prose-invert">
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                I'm a dedicated Full-Stack Developer based in Chemnitz, Germany, with a passion for 
-                creating exceptional digital experiences. My journey in web development started with a 
-                curiosity about how things work behind the scenes, and it has evolved into a career 
-                focused on building scalable, user-friendly applications.
+                I am a Full Stack Developer with 2+ years of experience building
+                scalable web applications and developing with cross-functional
+                teams. Expert in React, Node.js, and MongoDB, with a
+                demonstrated impact of reducing deployment times by 40% and
+                improving application load times by 60%. Skilled in
+                collaborating with stakeholders to deliver secure,
+                high-performance software solutions in Agile environments.
+                Strong commitment to clean code, documentation, and
+                mentoringjunior developers.
               </p>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                I specialize in modern React ecosystems, backend development with Node.js, and database 
-                design. I believe in writing clean, maintainable code and staying up-to-date with the 
-                latest industry trends and best practices.
+                I specialize in modern React ecosystems, backend development
+                with Node.js, and database design. I believe in writing clean,
+                maintainable code and staying up-to-date with the latest
+                industry trends and best practices.
               </p>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                When I'm not coding, you can find me exploring new technologies, contributing to open-source 
-                projects, or sharing knowledge with the developer community.
+                When I'm not coding, you can find me exploring new technologies,
+                contributing to open-source projects, or sharing knowledge with
+                the developer community.
               </p>
             </div>
 
@@ -99,8 +109,18 @@ const About = () => {
               </h4>
               <div className="flex flex-wrap gap-3">
                 {[
-                  'React', 'Next.js', 'TypeScript', 'JavaScript', 'Node.js', 'Express.js',
-                  'PostgreSQL', 'MongoDB', 'Docker', 'AWS', 'Git', 'Tailwind CSS'
+                  "React",
+                  "Next.js",
+                  "TypeScript",
+                  "JavaScript",
+                  "Node.js",
+                  "Express.js",
+                  "PostgreSQL",
+                  "MongoDB",
+                  "Docker",
+                  "AWS",
+                  "Git",
+                  "Tailwind CSS",
                 ].map((tech) => (
                   <span
                     key={tech}

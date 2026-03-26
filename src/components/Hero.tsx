@@ -72,7 +72,7 @@ const Hero = () => {
           {/* Description */}
           <p className="text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
             I create exceptional digital experiences through innovative web solutions. 
-            With 1+ years of experience, I specialize in building scalable applications 
+            With 2+ years of experience, I specialize in building scalable applications 
             that make a difference.
           </p>
 

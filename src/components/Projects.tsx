@@ -1,44 +1,49 @@
-import React from 'react';
-import { Github, ExternalLink } from 'lucide-react';
+import React from "react";
+import { Github, ExternalLink } from "lucide-react";
 
 const Projects = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with React, Next js, Node.js, and PostgreSQL. Features include user authentication, product management, shopping cart, and payment integration.',
-      image: '/e-commerce.JPG',
-      tech: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'JWT'],
-      github: '',
-      live: 'https://taseeofficial.com',
+      title: "E-Commerce Platform",
+      description:
+        "A full-stack e-commerce solution with React, Next js, Node.js, and PostgreSQL. Features include user authentication, product management, shopping cart, and payment integration.",
+      image: "/e-commerce.JPG",
+      tech: ["React", "Node.js", "PostgreSQL", "Stripe", "JWT"],
+      github: "",
+      live: "https://taseeofficial.com",
     },
     {
-      title: 'Rehydr8 - A company Website',
-      description: 'A company website for Rehydr8, a water bottle manufacturer and retailer, showcasing their products and vision.',
-      image: '/water.jpg',
-      tech: ['React', 'TypeScript', 'Socket.io', 'MongoDB', 'Express'],
-      live: 'https://rehydr8.vercel.app',
+      title: "Gaming Portal Dashboard",
+      description:
+        "Casino Monsters Portal is a comprehensive platform designed for managing casino games, players, transactions, and more. It features five hierarchical levels of user access and control, allowing for efficient management and operation within the casino environment.",
+      image: "/gaming-portal.png",
+      tech: ["React", "Chart.js", "OpenWeather API", "Tailwind CSS"],
+      live: "https://casinomonsters.vip/login",
     },
     {
-      title: 'Gaming Portal Dashboard',
-      description: 'Casino Monsters Portal is a comprehensive platform designed for managing casino games, players, transactions, and more. It features five hierarchical levels of user access and control, allowing for efficient management and operation within the casino environment.',
-      image: '/gaming-portal.png',
-      tech: ['React', 'Chart.js', 'OpenWeather API', 'Tailwind CSS'],
-      live: 'https://casinomonsters.vip/login',
+      title: "Payment Portal for Gaming Portal",
+      description:
+        "A secure payment portal for the Gaming Portal, built with Stripe Integration allowing users to manage their transactions and account balance with real-time updates and transaction history.",
+      image: "/paymentPortal.jpg",
+      tech: ["React", "Node.js", "Express", "MongoDB", "Stripe"],
+      live: "https://main.dla4cz2vcdwio.amplifyapp.com",
     },
     {
-      title: 'Payment Portal for Gaming Portal',
-      description: 'A secure payment portal for the Gaming Portal, built with Stripe Integration allowing users to manage their transactions and account balance with real-time updates and transaction history.',
-      image: 'https://images.unsplash.com/photo-1521791136060-8f1b2c3d4e5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Stripe'],
-      live: 'https://main.dla4cz2vcdwio.amplifyapp.com',
-    },
-    {
-      title : "Internship Management System",
-      description: "A comprehensive internship management system for CUST that streamlines the process of managing internships, applications, and placements. It features user-friendly interfaces for both students and employers, allowing for efficient communication and tracking of internship opportunities.",
-      image: 'https://images.unsplash.com/photo-1521791136060-8f1b2c3d4e5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      tech: ['React', 'Node.js', 'Express', 'MongoDB'],
+      title: "Internship Management System",
+      description:
+        "A comprehensive internship management system for CUST that streamlines the process of managing internships, applications, and placements. It features user-friendly interfaces for both students and employers, allowing for efficient communication and tracking of internship opportunities.",
+      image: "/backgroundImage.jpg",
+      tech: ["React", "Node.js", "Express", "MongoDB"],
       // live: 'https://internship-management-demo.com',
-    }
+    },
+    {
+      title: "Rehydr8 - A company Website",
+      description:
+        "A company website for Rehydr8, a water bottle manufacturer and retailer, showcasing their products and vision.",
+      image: "/water.jpg",
+      tech: ["React", "TypeScript", "Socket.io", "MongoDB", "Express"],
+      live: "https://rehydr8.vercel.app",
+    },
   ];
 
   return (
@@ -46,10 +51,14 @@ const Projects = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Featured <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Projects</span>
+            Featured{" "}
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Projects
+            </span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            Here are some of my recent projects that showcase my skills and experience
+            Here are some of my recent projects that showcase my skills and
+            experience
           </p>
         </div>
 
@@ -64,9 +73,13 @@ const Projects = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  className={`w-full h-full ${
+                    project.title === "Gaming Portal Dashboard"
+                      ? "object-cover"
+                      : ""
+                  } group-hover:scale-110 transition-transform duration-300`}
                   style={{
-                    objectPosition: 'center',
+                    objectPosition: "center",
                   }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -128,18 +141,17 @@ const Projects = () => {
                       <span className="text-sm font-medium">Code</span>
                     </a>
                   )}
-                  { project.live && 
-                                      <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center space-x-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
-                  >
-                    <ExternalLink size={16} />
-                    <span className="text-sm font-medium">Live Demo</span>
-                  </a>
-                  }
-
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+                    >
+                      <ExternalLink size={16} />
+                      <span className="text-sm font-medium">Live Demo</span>
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
