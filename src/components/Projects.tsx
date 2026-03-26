@@ -4,9 +4,18 @@ import { Github, ExternalLink } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
+      title: "DockLock.ai",
+      description:
+        "A fully containerized Next.js and NestJS application using Docker, integrating OpenStreetMap API, real-time activity reporting, and complete developer documentation for onboarding.",
+      image: "/DockLock.jpg",
+      tech: ["Nest.js", "Next.js", "TypeScript", "Docker", "OpenStreetMap API"],
+      github: "",
+      live: "https://doclock.ai",
+    },
+    {
       title: "E-Commerce Platform",
       description:
-        "A full-stack e-commerce solution with React, Next js, Node.js, and PostgreSQL. Features include user authentication, product management, shopping cart, and payment integration.",
+        "A complete e-commerce platform generating $30,000 in monthly revenue, implementing REST API backend, Stripe payment integration, and a real-time admin dashboard with automated notification pipelines.",
       image: "/e-commerce.JPG",
       tech: ["React", "Node.js", "PostgreSQL", "Stripe", "JWT"],
       github: "",
@@ -15,9 +24,17 @@ const Projects = () => {
     {
       title: "Gaming Portal Dashboard",
       description:
-        "Casino Monsters Portal is a comprehensive platform designed for managing casino games, players, transactions, and more. It features five hierarchical levels of user access and control, allowing for efficient management and operation within the casino environment.",
+        "A Game Management portal serving 1,000+ daily active users with RBAC implemented for 4-tier user hirerachy, building React and Next.js frontend, Node.js backend APIs, and JWT authentication from scratch through full production deployment on AWS.",
       image: "/gaming-portal.png",
-      tech: ["React", "Chart.js", "OpenWeather API", "Tailwind CSS"],
+      tech: [
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "TypeScript",
+        "Node.js",
+        "PostgreSQL",
+        "JWT",
+      ],
       live: "https://casinomonsters.vip/login",
     },
     {
@@ -25,7 +42,14 @@ const Projects = () => {
       description:
         "A secure payment portal for the Gaming Portal, built with Stripe Integration allowing users to manage their transactions and account balance with real-time updates and transaction history.",
       image: "/paymentPortal.jpg",
-      tech: ["React", "Node.js", "Express", "MongoDB", "Stripe"],
+      tech: [
+        "React",
+        "Node.js",
+        "Express",
+        "Socket.io",
+        "PostgreSQL",
+        "Stripe",
+      ],
       live: "https://main.dla4cz2vcdwio.amplifyapp.com",
     },
     {
@@ -34,15 +58,23 @@ const Projects = () => {
         "A comprehensive internship management system for CUST that streamlines the process of managing internships, applications, and placements. It features user-friendly interfaces for both students and employers, allowing for efficient communication and tracking of internship opportunities.",
       image: "/backgroundImage.jpg",
       tech: ["React", "Node.js", "Express", "MongoDB"],
-      // live: 'https://internship-management-demo.com',
+      github: "https://github.com/AmeerAbdullah12/InternhsipPortal"
     },
     {
       title: "Rehydr8 - A company Website",
       description:
         "A company website for Rehydr8, a water bottle manufacturer and retailer, showcasing their products and vision.",
       image: "/water.jpg",
-      tech: ["React", "TypeScript", "Socket.io", "MongoDB", "Express"],
+      tech: ["React", "TypeScript", "MongoDB", "Express"],
       live: "https://rehydr8.vercel.app",
+    },
+    {
+      title: "New Tab Chrome Extension",
+      description:
+        "A Chrome browser extension using Chrome Extension APIs and JavaScript that overrides the default New Tab page with minimalist countdown and asynchronously fetched quote, demonstrating direct hands-on experience with browser extension architecture, manifest configuration, and browser runtime APIs.",
+      image: "/NewTabExtension.jpg",
+      tech: ["HTML", "CSS", "JavaScript", "Chrome local Storage"],
+      github: "https://github.com/AmeerAbdullah12/NewTabExtension",
     },
   ];
 
@@ -74,7 +106,7 @@ const Projects = () => {
                   src={project.image}
                   alt={project.title}
                   className={`w-full h-full ${
-                    project.title === "Gaming Portal Dashboard"
+                    project.title === "Gaming Portal Dashboard" || "DockLock.ai"
                       ? "object-cover"
                       : ""
                   } group-hover:scale-110 transition-transform duration-300`}
@@ -95,15 +127,17 @@ const Projects = () => {
                       <Github size={18} />
                     </a>
                   )}
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-full text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 shadow-lg"
-                    aria-label="View live demo"
-                  >
-                    <ExternalLink size={18} />
-                  </a>
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-full text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 shadow-lg"
+                      aria-label="View live demo"
+                    >
+                      <ExternalLink size={18} />
+                    </a>
+                  )}
                 </div>
               </div>
 

@@ -50,7 +50,11 @@ const Hero = () => {
           <div className="mb-8">
             <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-br from-blue-500 to-purple-600 p-1">
               <div className="w-full h-full rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                <span className="text-6xl font-bold text-gray-600 dark:text-gray-300">AA</span>
+                {/* <span className="text-6xl font-bold text-gray-600 dark:text-gray-300">AA</span> */}
+                <img src='/profilePicture.jpg' 
+                alt='Profile Picture'
+                className="w-full h-full object-cover rounded-full"
+                />
               </div>
             </div>
           </div>
